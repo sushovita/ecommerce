@@ -1,0 +1,246 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  header .logo h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  
+  header .logo p {
+    font-size: 1rem;
+    color: #bbb;
+  }
+  
+  header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    font-size: 1rem;
+  }
+  
+  header nav ul li a:hover {
+    color: #f39c12;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideInFromTop 1.5s forwards;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: slideInFromTop 2s forwards;
+  }
+  
+  .hero .cta-btn {
+    background-color: #f39c12;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    animation: slideInFromTop 2.5s forwards;
+  }
+  
+  .hero .cta-btn:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Products Section */
+  .products {
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  
+  .products h2 {
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideInFromLeft 1s forwards;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .product-card p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .product-card .btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .product-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .product-card .btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+  }
+  
+  /* About Section */
+  .about {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  
+  .about h2 {
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+  }
+  
+  /* Contact Section */
+  .contact {
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  
+  .contact h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contact a {
+    color: #3498db;
+    font-weight: bold;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
